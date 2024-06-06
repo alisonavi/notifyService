@@ -1,0 +1,13 @@
+syntax = "proto3";
+
+service NotificationService {
+  rpc NotifyOrderReady (Order) returns (NotificationResponse);
+}
+
+message Order {
+  string order_id = 1;
+}
+
+message NotificationResponse {
+  string message = 1;
+}
